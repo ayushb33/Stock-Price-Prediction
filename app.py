@@ -17,6 +17,7 @@ end = '2024-12-31'
 
 data = yf.download(stock, start, end)
 
+
 st.subheader('Stock Data')
 st.write(data)
 
