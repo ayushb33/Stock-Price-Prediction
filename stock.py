@@ -36,8 +36,6 @@ if pick != "Custom":
 today = dt.date.today()
 start = st.sidebar.date_input("Start date", value=today.replace(year=today.year - 5), max_value=today)
 
-# Model path (adjust if needed)
-MODEL_PATH = r"C:\minor project-stock prediction\Stock Prediction Model.keras"
 
 run = st.sidebar.button("Run", use_container_width=True)
 
