@@ -8,6 +8,7 @@ import yfinance as yf
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import r2_score, mean_absolute_error
 from tensorflow import keras
+from pathlib import Path
 
 # ---------------- Setup ----------------
 st.set_page_config(page_title="Stock Price Predictor", page_icon="📈", layout="wide")
@@ -15,6 +16,10 @@ pio.templates.default = "plotly"
 
 # Fixed lookback matching your LSTM snippet
 LOOKBACK = 100
+
+# Resolve app directory and model file (relative path works locally and on Streamlit Cloud)
+APP_DIR = Path(__file__).resolve().parent
+MODEL_PATH = APP_DIR / "models" / "Stock Prediction Model.keras"
 
 # ---------- Sidebar ----------
 st.sidebar.subheader("📊 Stock Settings")
